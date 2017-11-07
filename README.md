@@ -1,0 +1,2 @@
+# JNGroupAvatarImageView
+Group avatar image
