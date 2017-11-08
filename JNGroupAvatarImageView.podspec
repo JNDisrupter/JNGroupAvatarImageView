@@ -9,7 +9,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/JNDisrupter/JNGroupAvatarImageView.git", :tag => "#{s.version}" }
   s.source_files = "JNGroupAvatarImageView/**/*.{swift}"
-  s.resources = "JNGroupAvatarImageView/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
   s.framework  = "UIKit"
   s.dependency 'JNAvatarWithInitials'
 end
