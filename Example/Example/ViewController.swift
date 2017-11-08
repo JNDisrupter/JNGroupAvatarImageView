@@ -20,12 +20,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
         let user1 = User()
-        user1.name = "Jayel Zaghmoutt"
-        user1.imageUrl = "https://avatars3.githubusercontent.com/u/5199603"
+        user1.name = "Steve Wozniak"
+        user1.imageUrl = "https://upload.wikimedia.org/wikipedia/commons/f/f6/Steve_Wozniak.jpg"
         
         let user2 = User()
-        user2.name = "Mohammad Nabulsi"
-        user2.imageUrl = "https://avatars3.githubusercontent.com/u/8538687"
+        user2.name = "Sophia Teutschler"
+        user2.imageUrl = "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAfgAAAAJDVhZDdkZWEwLTllMGItNDJiNS1hYTBhLWI1MmNhMmJiZDYxMA.jpg"
         
         let user3 = User()
         user3.name = "Steve Jobs"
@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         user5.name = "Steve Wozniak"
         
         // Setup group avatar image view
-        self.groupAvatarImageView.setup(avatars: Array([user1,user2,user3,user4,user5].prefix(upTo: self.itemIndex + 1)) , avatarsMargin : 2.0 , separatorColor : UIColor.black , showInitails : true, initialTextColor : UIColor.black)
+        self.groupAvatarImageView.setup(avatars: Array([user1,user2,user3,user4,user5].prefix(upTo: self.itemIndex + 1)) , avatarsMargin : 2.0 , separatorColor : UIColor.gray , showInitails : true, initialTextColor : UIColor.black)
         
         // Add border container
-        self.groupAvatarImageView.layer.borderColor = UIColor.black.cgColor
+        self.groupAvatarImageView.layer.borderColor = UIColor.gray.cgColor
         self.groupAvatarImageView.layer.borderWidth = 2
         
         if self.itemIndex >= 4 {
