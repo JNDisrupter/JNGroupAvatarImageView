@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.authors      = { "Jayel Zaghmoutt" => "eng.jayel.z@gmail.com", "Mohammad Nabulsi" => "mohammad.s.nabulsi@gmail.com" }
   s.ios.deployment_target = '9.0'
-  s.source       = { :git => "https://github.com/JNDisrupter/JNGroupAvatarImageView.git", :branch => "testPod" }
+  s.source       = { :git => "https://github.com/JNDisrupter/JNGroupAvatarImageView.git", :tag => "#{s.version}"}
   s.source_files = "JNGroupAvatarImageView/**/*.{swift}"
   s.framework  = "UIKit"
   s.dependency 'JNAvatarWithInitials'
