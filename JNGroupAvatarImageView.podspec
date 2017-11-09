@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JNGroupAvatarImageView"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Group avatar image view with initials"
   s.description  = "This library provide a way to create group avatar images with initials"
   s.homepage     = "https://github.com/JNDisrupter"
@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source       = { :git => "https://github.com/JNDisrupter/JNGroupAvatarImageView.git", :tag => "#{s.version}"}
   s.source_files = "JNGroupAvatarImageView/**/*.{swift}"
+  s.screenshots  = [ 'https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot1.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot2.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot3.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot4.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot5.png']
   s.framework  = "UIKit"
   s.dependency 'JNAvatarWithInitials'
 end
