@@ -57,37 +57,36 @@ open class JNGroupAvatarImageView : UIView {
     }
     
     /**
-     Draw rect
+     Layout subviews
      */
-    override open func draw(_ rect: CGRect) {
-        super.draw(rect)
+    open override func layoutSubviews() {
+        super.layoutSubviews()
         
-        // Check if view is rounded
-        if self.layer.cornerRadius == self.frame.width / 2 {
+        // Inset Threshold
+        let insetsThreshold = self.layer.cornerRadius / (self.frame.width / 2)
+        
+        // Avatar image Inset
+        let avatarImageInset = (self.frame.size.width / 2) / 3 * insetsThreshold
+        
+        // Get views
+        let views = self.subviews.filter({$0 is JNAvatarWithInitials})
+        
+        // Check if there is three images
+        if views.count >= 3 {
             
-            // Get View Height
-            let leftTopBottomInitialInset = ((self.frame.size.height - 2) / 2.0) * 0.29
+            // Start index
+            let startIndex = views.count == 3 ? 1 : 0
             
-            // Get views
-            let views = self.subviews.filter({$0 is JNAvatarWithInitials})
-            
-            // Check if there is three images
-            if views.count >= 3 {
+            // Iterate views
+            for index in startIndex..<views.count {
                 
-                // Items threathold
-                let itemsThreathold = views.count == 3 ? 1 : 0
-                
-                // Iterate views
-                for (index , avatarImage) in views.enumerated() {
+                // Get avatar image as JNAvatarWithInitials
+                if let avatarImage = views[index] as? JNAvatarWithInitials {
                     
-                    // Get avatar image as JNAvatarWithInitials
-                    if let avatarImage = avatarImage as? JNAvatarWithInitials {
-                        
-                        if (index + 2) % 2 == itemsThreathold {
-                            avatarImage.initialLabelInset = UIEdgeInsets(top: leftTopBottomInitialInset, left: 0, bottom: 0, right: 0)
-                        } else {
-                            avatarImage.initialLabelInset = UIEdgeInsets(top: 0, left: 0, bottom: leftTopBottomInitialInset, right: 0)
-                        }
+                    if (index + views.count) % 2 == 0 {
+                        avatarImage.initialLabelInset = UIEdgeInsets(top: avatarImageInset, left: 0, bottom: 0, right: 0)
+                    } else {
+                        avatarImage.initialLabelInset = UIEdgeInsets(top: 0, left: 0, bottom: avatarImageInset , right: 0)
                     }
                 }
             }
@@ -139,8 +138,11 @@ open class JNGroupAvatarImageView : UIView {
             // Get item
             let avatar = avatars[i]
             
-            // Create JNAvatarview
+            // Create JNAvatarWithInitials
             let avatarView = JNAvatarWithInitials(frame: CGRect.zero)
+            
+            // Set content model
+            avatarView.avatarContentMode = UIViewContentMode.scaleAspectFill
             
             // Set font
             avatarView.initialsFont = initialsFont
@@ -191,7 +193,7 @@ open class JNGroupAvatarImageView : UIView {
                 
                 // Add as subview
                 self.addSubview(separatorView)
-        
+                
                 // Add separator view
                 separatorsView.append(separatorView)
             }
