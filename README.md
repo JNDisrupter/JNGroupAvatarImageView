@@ -1,6 +1,5 @@
 # JNGroupAvatarImageView
 
-[![Build Status](https://travis-ci.org/JNDisrupter/JNGroupAvatarImageView.svg?branch=master)](https://travis-ci.org/JNDisrupter/JNGroupAvatarImageView)
 [![Version](https://img.shields.io/cocoapods/v/JNGroupAvatarImageView.svg?style=flat)](http://cocoapods.org/pods/JNGroupAvatarImageView)
 [![License](https://img.shields.io/cocoapods/l/JNGroupAvatarImageView.svg?style=flat)](http://cocoapods.org/pods/JNGroupAvatarImageView)
 [![Platform](https://img.shields.io/cocoapods/p/JNGroupAvatarImageView.svg?style=flat)](http://cocoapods.org/pods/JNGroupAvatarImageView)
