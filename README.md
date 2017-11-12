@@ -37,7 +37,7 @@ To integrate JNGroupAvatarImageView into your Xcode project using CocoaPods, spe
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'JNGroupAvatarImageView', '~> 4.5'
+    pod 'JNGroupAvatarImageView'
 end
 ```
 
