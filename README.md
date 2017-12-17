@@ -60,20 +60,26 @@ $ pod install
 
      /**
        Get display name which will be used for the initials.
-     
      - Returns: The display name for the avatar
      */
-    func getDisplayName() -> String {
+    func getGroupAvatarDisplayName() -> String {
        return ""
     }
     
     /**
        Get Avatar image url which will be used as avatar url
-     
      - Returns: The image url
      */
-    func getImageUrl() -> String {
+    func getGroupAvatarImageUrl() -> String {
         return ""
+    }
+    
+     /**
+       Get Avatar image which will be used as avatar
+     - Returns: The image 
+     */
+    func getGroupAvatarImage() -> UIImage {
+        return UIImage()
     }
  }
  ```
