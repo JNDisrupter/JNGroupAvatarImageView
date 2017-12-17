@@ -150,9 +150,16 @@ open class JNGroupAvatarImageView : UIView {
             // Set text color
             avatarView.initialTextColor = initialTextColor
             
-            // Setup avatar view
-            avatarView.setup(imageUrl : avatar.getImageUrl() , placeHolderImage: placeHolderImage, fullName: avatar.getDisplayName(),showInitails : showInitails)
+            // Get Avatar Image URL
+            let avatarImageURL = avatar.getGroupAvatarImageUrl()
             
+            // Setup avatar view
+            if let image = avatar.getGroupAvatarImage?(), avatarImageURL.isEmpty {
+                avatarView.setup(image : image , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
+            }else{
+               avatarView.setup(imageUrl : avatarImageURL , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
+            }
+           
             // Add as subview
             self.addSubview(avatarView)
         }
