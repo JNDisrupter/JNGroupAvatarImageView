@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JNGroupAvatarImageView"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "Group avatar image view with initials"
   s.description  = "This library provide a way to create group avatar images with initials"
   s.homepage     = "https://github.com/JNDisrupter"
