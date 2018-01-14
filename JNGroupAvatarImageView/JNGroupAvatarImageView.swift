@@ -154,9 +154,9 @@ open class JNGroupAvatarImageView : UIView {
             let avatarImageURL = avatar.getGroupAvatarImageUrl()
             
             // Setup avatar view
-            if let image = avatar.getGroupAvatarImage?(), avatarImageURL.isEmpty {
+            if let image = avatar.getGroupAvatarImage(), avatarImageURL.isEmpty {
                 avatarView.setup(image : image , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
-            }else{
+            } else {
                avatarView.setup(imageUrl : avatarImageURL , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
             }
            

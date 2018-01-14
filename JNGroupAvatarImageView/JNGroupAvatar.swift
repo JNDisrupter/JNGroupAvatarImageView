@@ -7,7 +7,7 @@
 //
 
 /// JNGroupAvatar
-@objc public protocol JNGroupAvatar {
+public protocol JNGroupAvatar {
     
     /**
        Get display name
@@ -25,5 +25,5 @@
      Get Avatar image
      - Returns: The UIImage
      */
-    @objc optional func getGroupAvatarImage() -> UIImage
+    func getGroupAvatarImage() -> UIImage?
 }
