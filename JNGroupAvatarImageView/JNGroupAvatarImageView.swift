@@ -132,11 +132,8 @@ open class JNGroupAvatarImageView : UIView {
         // Reset view
         self.resetView()
         
-        // Add images
-        for i in 0..<min(4, avatars.count) {
-            
-            // Get item
-            let avatar = avatars[i]
+        // Check if avatars array is empty then add image from placeholder image
+        if avatars.isEmpty && placeHolderImage != nil {
             
             // Create JNAvatarWithInitials
             let avatarView = JNAvatarWithInitials(frame: CGRect.zero)
@@ -144,24 +141,44 @@ open class JNGroupAvatarImageView : UIView {
             // Set content model
             avatarView.avatarContentMode = UIViewContentMode.scaleAspectFill
             
-            // Set font
-            avatarView.initialsFont = initialsFont
+             // Setup avatar view
+            avatarView.setup(image: placeHolderImage, placeHolderImage: placeHolderImage, fullName: "", showInitails: false)
             
-            // Set text color
-            avatarView.initialTextColor = initialTextColor
-            
-            // Get Avatar Image URL
-            let avatarImageURL = avatar.getGroupAvatarImageUrl()
-            
-            // Setup avatar view
-            if let image = avatar.getGroupAvatarImage(), avatarImageURL.isEmpty {
-                avatarView.setup(image : image , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
-            } else {
-               avatarView.setup(imageUrl : avatarImageURL , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
-            }
-           
             // Add as subview
             self.addSubview(avatarView)
+        } else {
+            
+            // Add images
+            for i in 0..<min(4, avatars.count) {
+                
+                // Get item
+                let avatar = avatars[i]
+                
+                // Create JNAvatarWithInitials
+                let avatarView = JNAvatarWithInitials(frame: CGRect.zero)
+                
+                // Set content model
+                avatarView.avatarContentMode = UIViewContentMode.scaleAspectFill
+                
+                // Set font
+                avatarView.initialsFont = initialsFont
+                
+                // Set text color
+                avatarView.initialTextColor = initialTextColor
+                
+                // Get Avatar Image URL
+                let avatarImageURL = avatar.getGroupAvatarImageUrl()
+                
+                // Setup avatar view
+                if let image = avatar.getGroupAvatarImage(), avatarImageURL.isEmpty {
+                    avatarView.setup(image : image , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
+                } else {
+                    avatarView.setup(imageUrl : avatarImageURL , placeHolderImage: placeHolderImage, fullName: avatar.getGroupAvatarDisplayName(),showInitails : showInitails)
+                }
+                
+                // Add as subview
+                self.addSubview(avatarView)
+            }
         }
         
         // Add constraints
