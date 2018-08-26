@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/JNDisrupter/JNGroupAvatarImageView.git", :tag => "#{s.version}"}
   s.source_files = "JNGroupAvatarImageView/**/*.{swift}"
   s.screenshots  = [ 'https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot1.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot2.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot3.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot4.png','https://github.com/JNDisrupter/JNGroupAvatarImageView/raw/development/Images/screenshot5.png']
-  s.framework  = "UIKit"
   s.dependency 'JNAvatarWithInitials' , '~> 1.1.0'
 end
