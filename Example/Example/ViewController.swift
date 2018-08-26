@@ -73,12 +73,30 @@ class ViewController: UIViewController {
         var name = ""
         var imageUrl = ""
         
-        func getImageUrl() -> String {
+        // MARK:- JN Group Avatar protocol
+        
+        /**
+        Get display name
+         - Returns: The display name for the avatar
+         */
+        func getGroupAvatarDisplayName() -> String {
+            return self.name
+        }
+        
+        /**
+        Get Avatar image url
+         - Returns: The image url
+         */
+        func getGroupAvatarImageUrl() -> String {
             return self.imageUrl
         }
         
-        func getDisplayName() -> String {
-            return self.name
+        /**
+         Get Avatar image
+         - Returns: The UIImage
+         */
+        func getGroupAvatarImage() -> UIImage? {
+            return nil
         }
     }
 }
