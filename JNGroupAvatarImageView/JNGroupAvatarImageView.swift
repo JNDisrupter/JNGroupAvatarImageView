@@ -139,7 +139,7 @@ open class JNGroupAvatarImageView : UIView {
             let avatarView = JNAvatarWithInitials(frame: CGRect.zero)
             
             // Set content model
-            avatarView.avatarContentMode = UIViewContentMode.scaleAspectFill
+            avatarView.avatarContentMode = UIView.ContentMode.scaleAspectFill
             
              // Setup avatar view
             avatarView.setup(image: placeHolderImage, placeHolderImage: placeHolderImage, fullName: "", showInitails: false)
@@ -158,7 +158,7 @@ open class JNGroupAvatarImageView : UIView {
                 let avatarView = JNAvatarWithInitials(frame: CGRect.zero)
                 
                 // Set content model
-                avatarView.avatarContentMode = UIViewContentMode.scaleAspectFill
+                avatarView.avatarContentMode = UIView.ContentMode.scaleAspectFill
                 
                 // Set font
                 avatarView.initialsFont = initialsFont
