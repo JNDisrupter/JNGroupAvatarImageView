@@ -15,9 +15,9 @@
 
 ## Requirements
 
-- iOS 9.0+ / macOS 10.10+
-- Xcode 9.0+
-- Swift 4+
+- iOS 11.0+ / macOS 15.6+
+- Xcode 16.0+
+- Swift 5+
 
 ## Installation
 
