@@ -8,6 +8,7 @@
 
 import Foundation
 import JNAvatarWithInitials
+import UIKit
 
 /**
  Images layout direction
