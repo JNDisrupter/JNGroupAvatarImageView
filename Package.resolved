@@ -1,0 +1,24 @@
+{
+  "originHash" : "89abe9fe78b9ff59190943f3d05e0acdb480034bf6382352aa9f516f93cca0b3",
+  "pins" : [
+    {
+      "identity" : "jnavatarwithinitials",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JNDisrupter/JNAvatarWithInitials.git",
+      "state" : {
+        "revision" : "ef010ff2db3028f4ceac0304c2e8d771f18754a2",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "449e8f8f10377f620db8ad22ea81208eecf6325f",
+        "version" : "5.21.6"
+      }
+    }
+  ],
+  "version" : 3
+}
