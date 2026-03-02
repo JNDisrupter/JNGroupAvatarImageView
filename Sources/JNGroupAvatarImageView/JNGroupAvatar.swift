@@ -6,6 +6,8 @@
 //  Copyright © 2017 JNDisrupter. All rights reserved.
 //
 
+import UIKit
+
 /// JNGroupAvatar
 public protocol JNGroupAvatar {
     
